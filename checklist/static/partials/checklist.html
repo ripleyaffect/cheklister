@@ -1,0 +1,40 @@
+<div>
+	<div class="intro text-center">
+		<p>Welcome to Cheklister, the smart checklist tool! </p>
+		<p>Do you habitually check off the easiest things on your to-do list? </p>
+		<p>Cheklister weights your tasks with a priority level, so you can see how much of your work you've <em>actually</em> done.</p>
+		<p>Higher weighted items are worth more of your total percentage.</p>
+	</div>
+
+	<div class="checklist">
+		<input id="list-title" type="text" placeholder="Change This Title" value="{{ list_title }}">
+
+		<div class="progress-container">
+			<div class="progress-bar" style="width: {{ percentComplete() }}%;">
+			</div>
+		</div>
+
+		<h4 class="text-center">{{ numComplete() }} {{ itemPlural() }} completed : {{ percentComplete() }}% done!</h4>
+
+		<div ng-repeat="item in items">
+			<p class="item">
+				<input type="checkbox" ng-model="item.complete">
+				<input id="item-text" class="complete-{{ item.complete }} pri_{{ item.priority }}" type="text" value="{{ item.text }}">
+				<button ng-click="deleteItem(item)" class="delete-button">x</button>
+			</p>
+		</div>
+
+		<form>
+			<div id="new-priority">
+				<input id="new-item-text" type="text" ng-model="new_item.text">
+				Weight:  
+				1 <input id="p-one-radio" type="radio" ng-model="new_item.priority" value="1">
+				2 <input id="p-two-radio" type="radio" ng-model="new_item.priority" value="2">
+				3 <input id="p-three-radio" type="radio" ng-model="new_item.priority" value="3">
+			</div>
+			<br>
+			<button type="submit" ng-click="addItem()" class="add-button">+</button>
+		</form>
+		
+	</div>
+</div>
