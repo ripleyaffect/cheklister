@@ -1,5 +1,5 @@
 body {
-	/*font-family: 'Gloria Hallelujah', cursive;*/
+	font-family: 'Actor', sans-serif;
 }
 
 .header {
@@ -8,7 +8,7 @@ body {
 	margin-bottom: 20px;
 	padding-top: 20px;
 	padding-bottom: 10px;
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Actor', sans-serif;
 	background-color: #333;
 	color: #fff;
 }
@@ -37,7 +37,7 @@ body {
 	box-shadow: none;
 	color: #333;
 	font-size: 25pt;
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Actor', sans-serif;
 }
 
 #list-title:hover {
@@ -69,12 +69,14 @@ body {
 
 h4 {
 	padding-top: 0px;
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Actor', sans-serif;
 }
 
 .item {
 	position: relative;
 	margin: 0px;
+	padding-bottom: 8px;
+	padding-top: 8px;
 	border-radius: 5px;
 }
 
@@ -91,12 +93,13 @@ h4 {
 	box-shadow: none;
 	margin: 0px;
 	padding: 0px;
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Actor', sans-serif;
 	font-size: 1.5em;
 }
 
 input[type=checkbox] {
 	margin-left: 10px;
+	margin-right: 10px;
 }
 
 input.pri_1 {
@@ -108,7 +111,7 @@ input.pri_2 {
 }
 
 input.pri_3 {
-color: #555555;
+	color: #555555;
 }
 
 input.pri_4 {
@@ -134,11 +137,11 @@ input.pri_5 {
 	border-radius: 5px;
 	border: none;
 	float: right;
-	background-color: #A62103;
+	background-color: #C64123;
 	color: #fff;
 }
 .delete-button:hover {
-	background-color: #C64123;
+	background-color: #D65133;
 }
 
 #new-item-text {
@@ -146,7 +149,9 @@ input.pri_5 {
 	width: 98%;
 	height: 90%;
 	font-size: 15pt;
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Actor', sans-serif;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 
 #pri-buttons {
@@ -157,12 +162,16 @@ input.pri_5 {
 
 button.pri-button {
 	width: 20%;
+	padding-bottom: 10px;
 	border-style: none;
 	box-shadow: none;
-	font-family: 'Gloria Hallelujah', cursive;
+	color: #222;
+	text-shadow: none;
+	font-family: 'Actor', sans-serif;
 }
 
 #p-1-add {
+	border-top-left-radius: 0px;
 	font-size: 15pt;
 	background: #569976;
 }
@@ -183,6 +192,7 @@ button.pri-button {
 }
 
 #p-5-add {
+	border-top-right-radius: 0px;
 	font-size: 15pt;
 	background: #C64123;
 }
