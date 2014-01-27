@@ -5,7 +5,7 @@ function ChecklistController($scope) {
 	$scope.items = [ 
 		{ text: 'Edit an item by tapping it', complete: false, priority: 5 }, 
 		{ text: 'Delete items by tapping the "x"', complete: false, priority: 4 }, 
-		{ text: 'Start using Cheklist', complete: true, priority: 3 }, 
+		{ text: 'Start using Cheklistr', complete: true, priority: 3 }, 
 		{ text: 'Add an task by tapping the desired weight', complete: false, priority: 2 },
 		{ text: 'Start your own list', complete: false, priority: 1 }
 	];
