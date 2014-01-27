@@ -7,7 +7,20 @@
 	</div>
 
 	<div class="checklist">
-		<input id="list-title" type="text" placeholder="Change This Title" value="{{ list_title }}">
+		<input id="list-title" type="text" value="{{ list_title }}">
+
+		<form>
+			<div id="new-priority">
+				<input id="new-item-text" type="text" ng-model="new_item.text"> 
+				<div id="pri-buttons" class="btn-group">
+					<button id="p-1-add" class="btn btn-default pri-button" ng-click="addItem(1)">1</button>
+					<button id="p-2-add" type="submit" class="btn btn-default pri-button" ng-click="addItem(2)">2</button>
+					<button id="p-3-add" class="btn btn-default pri-button" ng-click="addItem(3)">3</button>
+					<button id="p-4-add" class="btn btn-default pri-button" ng-click="addItem(4)">4</button>
+					<button id="p-5-add" class="btn btn-default pri-button" ng-click="addItem(5)">5</button>
+				</div>
+			</div>
+		</form>
 
 		<div class="progress-container">
 			<div class="progress-bar" style="width: {{ percentComplete() }}%;">
@@ -20,21 +33,9 @@
 			<p class="item">
 				<input type="checkbox" ng-model="item.complete">
 				<input id="item-text" class="complete-{{ item.complete }} pri_{{ item.priority }}" type="text" value="{{ item.text }}">
-				<button ng-click="deleteItem(item)" class="delete-button">x</button>
+				<button ng-click="deleteItem($index)" class="delete-button">x</button>
 			</p>
 		</div>
 
-		<form>
-			<div id="new-priority">
-				<input id="new-item-text" type="text" ng-model="new_item.text">
-				Weight:  
-				1 <input id="p-one-radio" type="radio" ng-model="new_item.priority" value="1">
-				2 <input id="p-two-radio" type="radio" ng-model="new_item.priority" value="2">
-				3 <input id="p-three-radio" type="radio" ng-model="new_item.priority" value="3">
-			</div>
-			<br>
-			<button type="submit" ng-click="addItem()" class="add-button">+</button>
-		</form>
-		
 	</div>
 </div>

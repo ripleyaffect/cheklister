@@ -1,33 +1,33 @@
 'use strict';
 
 function ChecklistController($scope) {
-	$scope.list_title = 'Change This Title';
+	$scope.list_title = 'You Can Change This Title';
 	$scope.items = [ 
-		{ text: 'Edit an item by tapping it', complete: false, priority: 3 }, 
-		{ text: 'Item one', complete: true, priority: 2 }, 
-		{ text: 'Item two', complete: false, priority: 2 },
+		{ text: 'Edit an item by tapping it', complete: false, priority: 5 }, 
+		{ text: 'Delete items by tapping the "x"', complete: false, priority: 4 }, 
+		{ text: 'Start using Cheklist', complete: true, priority: 3 }, 
+		{ text: 'Add an task by tapping the desired weight', complete: false, priority: 2 },
 		{ text: 'Start your own list', complete: false, priority: 1 }
 	];
-	$scope.new_item = { text: 'New item', priority: 2 }
+	$scope.new_item = { text: 'New item' }
 
-	$scope.addItem = function() {
+	$scope.addItem = function(priority) {
 		if($scope.new_item.text == '') {
 			return;
 		}
 		$scope.items.push({ 
 			text: $scope.new_item.text, 
 			complete: false,
-			priority: $scope.new_item.priority
+			priority: priority
 		});
 		$scope.items.sort(function(a, b) { return a });
 		$scope.items.sort(function(a, b){
  			return b.priority-a.priority
 		})
-		$scope.new_item.text = 'New item';
 	}
 
-	$scope.deleteItem = function(item) {
-		$scope.items.splice($scope.items.indexOf(item), 1);
+	$scope.deleteItem = function(index) {
+		$scope.items.splice(index, 1);
 	}
 
 	$scope.numComplete = function() {
